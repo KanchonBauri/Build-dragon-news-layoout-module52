@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import LatestNews from '../components/LatestNews';
 import Navbar from '../components/Navbar';
+import LeftNavbar from '../components/layout-component/LeftNavbar';
 
 const HomeLayout = () => {
     return (
@@ -16,7 +17,9 @@ const HomeLayout = () => {
                 <Navbar></Navbar>
             </nav>
             <main className='w-11/12 mx-auto pt-5 grid grid-cols-12 gap-3  '>
-                <aside className='left-0 col-span-3 '>Left Navbar</aside>
+                <aside className='left-0 col-span-3 '>
+                    <LeftNavbar></LeftNavbar>
+                </aside>
                 <section className='col-span-6'>Main Section</section>
                 <aside className=' col-span-3 '>Righ Navbar</aside>
             </main>
