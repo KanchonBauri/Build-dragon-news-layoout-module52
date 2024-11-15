@@ -1,5 +1,6 @@
 import React from "react";
 import { FaRegHeart, FaStar, FaEye } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const NewsCart = ({ news }) => {
   return (
@@ -32,7 +33,7 @@ const NewsCart = ({ news }) => {
       <div className="text-gray-600 text-sm mb-4">
         <p>
           {news.details.slice(0, 120)}...{" "}
-          <span className="text-blue-500 cursor-pointer">Read More</span>
+          <Link to={`/news/${news._id}`} className="text-blue-500 cursor-pointer">Read More</Link>
         </p>
       </div>
 

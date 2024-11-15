@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 
 const Login = () => {
@@ -14,6 +14,7 @@ const Login = () => {
             .then((result) => {
                 const user = result.user;
                 setUser(user);
+               
             })
             .catch((error) => {
                 alert(error.code);
