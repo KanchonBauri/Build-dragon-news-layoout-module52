@@ -6,7 +6,7 @@ const CategoryNews = () => {
     // const {data: news} = useLoaderData();
     // console.log(news)
     const x = useLoaderData();
-    console.log(x.data)
+    // console.log(x.data)
     const news = x.data
 
     return (
