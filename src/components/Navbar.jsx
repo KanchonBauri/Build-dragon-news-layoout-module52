@@ -7,10 +7,6 @@ const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
     // console.log(user?.email)
 
-    // const handleLogout = () => {
-    //     logOut()
-    // }
-
     return (
         <div className='flex justify-between items-center '>
             <div className="">{user?.email}</div>
@@ -20,7 +16,9 @@ const Navbar = () => {
                 <Link to="/about">About</Link>
             </div>
             <div className="login flex gap-2 ">
-                <img src={userIcon} alt="" />
+                {
+                    user && user?.email ? <div><img className='rounded-full w-20 h-20 ' src={user.photoURL} alt="" /></div> : <img src={userIcon} alt="" />
+                }
                 {
                     user && user?.email ? <button onClick={logOut}>logout</button> : <Link to="/auth/login" className='btn btn-neutral rounded-none'>Login</Link>
                 }
