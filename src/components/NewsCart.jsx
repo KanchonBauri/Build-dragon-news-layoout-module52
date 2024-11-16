@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const NewsCart = ({ news }) => {
   return (
-    <div className="card bg-base-100 shadow-xl max-w-full p-4">
+    <div className="card bg-base-100 rounded-none shadow-xl max-w-full p-4">
       {/* Author and Date */}
       <div className="flex items-center mb-4">
         <img
@@ -26,7 +26,7 @@ const NewsCart = ({ news }) => {
 
       {/* Image */}
       <figure className="mb-4">
-        <img src={news.image_url} alt="News" className="rounded-lg" />
+        <img src={news.image_url} alt="News" className="rounded-none" />
       </figure>
 
       {/* Details */}
